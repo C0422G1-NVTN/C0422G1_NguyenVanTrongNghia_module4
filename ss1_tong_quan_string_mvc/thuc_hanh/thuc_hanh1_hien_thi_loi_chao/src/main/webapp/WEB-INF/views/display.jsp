@@ -7,10 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<form action="/displayHello" method="post">
+    <h1>Nhập tên</h1>
+    <input type="text" name="keyChar">
+    <button type="submit">Enter</button>
+</form>
+<h1> ${result}</h1>
+</body>
 </html>
