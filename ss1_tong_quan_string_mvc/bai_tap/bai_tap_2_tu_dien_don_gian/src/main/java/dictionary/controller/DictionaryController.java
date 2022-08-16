@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class DictionaryController {
     @Autowired
-    IDictionaryService iDictionaryService;
-
+    private IDictionaryService iDictionaryService;
 
     @GetMapping("/")
     public String dictionary() {
@@ -20,9 +19,9 @@ public class DictionaryController {
     }
 
     @PostMapping("/search")
-public String search(@RequestParam String keySearch, Model model){
-       String result = iDictionaryService.findByName(keySearch);
-       model.addAttribute("result",result);
-return "/dictionary";
+    public String search(@RequestParam String keySearch, Model model) {
+        String result = iDictionaryService.findByName(keySearch);
+        model.addAttribute("result", result);
+        return "/dictionary";
     }
 }

@@ -1,13 +1,15 @@
 package dictionary.service.impl;
 
 import dictionary.repository.IDictionaryRepository;
-import dictionary.repository.impl.DictionaryRepository;
 import dictionary.service.IDictionaryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DictionaryService implements IDictionaryService {
-    IDictionaryRepository iDictionaryRepository = new DictionaryRepository();
+    @Autowired
+    private IDictionaryRepository iDictionaryRepository;
+
     @Override
     public String findByName(String keySearch) {
         return iDictionaryRepository.findByName(keySearch);

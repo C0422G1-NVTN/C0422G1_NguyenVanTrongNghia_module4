@@ -5,29 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ff661e0-7c0f-48f8-9efc-82e22eb747aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/controller/Greeting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/webapp/WEB-INF/views/greeting.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/controller/DictionaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/repository/IDictionaryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/repository/impl/DictionaryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/service/IDictionaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dictionary/service/impl/DictionaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dictionary.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baitap1_ung_dung_chuyen_doi_tien_te/src/main/java/com/example/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baitap1_ung_dung_chuyen_doi_tien_te/src/main/java/com/example/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baitap1_ung_dung_chuyen_doi_tien_te/src/main/java/com/example/controller/ConvertController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baitap1_ung_dung_chuyen_doi_tien_te/src/main/java/com/example/service/IConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baitap1_ung_dung_chuyen_doi_tien_te/src/main/java/com/example/service/impl/Convert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../baitap1_ung_dung_chuyen_doi_tien_te/src/main/webapp/WEB-INF/views/listMoney.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1_hien_thi_loi_chao/src/main/java/hello/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1_hien_thi_loi_chao/src/main/java/hello/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1_hien_thi_loi_chao/src/main/java/hello/controller/DisplayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh1_hien_thi_loi_chao/src/main/webapp/WEB-INF/views/display.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/controller/customerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/model/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Trung.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/controller/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/controller/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/webapp/WEB-INF/views/greeting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/webapp/WEB-INF/views/greeting.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +177,7 @@
       <updated>1660537918747</updated>
       <workItem from="1660537920965" duration="4480000" />
       <workItem from="1660548011523" duration="8000" />
-      <workItem from="1660548175545" duration="2805000" />
+      <workItem from="1660548175545" duration="3584000" />
     </task>
     <servers />
   </component>

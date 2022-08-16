@@ -1,5 +1,5 @@
 package com.example.service;
 
-public interface IConvert {
+public interface IConvertService {
     double convertUsdAndVnd(double usd);
 }
