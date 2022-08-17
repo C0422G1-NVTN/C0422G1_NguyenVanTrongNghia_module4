@@ -57,7 +57,7 @@ public class MedicalController {
         List<Integer> dayList = iMedicalService.day();
         List<Integer> monthList = iMedicalService.month();
         List<Integer> yearList = iMedicalService.year();
-        model.addAttribute("edit",iMedicalService.findId(id));
+        model.addAttribute("edit", iMedicalService.findId(id));
         model.addAttribute("genderList", genderList);
         model.addAttribute("nationList", nationList);
         model.addAttribute("vehicleList", vehicleList);
