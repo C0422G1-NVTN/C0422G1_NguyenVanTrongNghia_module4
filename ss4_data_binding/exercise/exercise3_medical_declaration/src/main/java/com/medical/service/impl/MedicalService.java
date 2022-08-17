@@ -44,7 +44,27 @@ public class MedicalService implements IMedicalService {
     }
 
     @Override
-    public List<Medical> saveMedical(Medical medical) {
-        return iMedicalRepository.saveMedical(medical);
+    public void saveMedical(Medical medical) {
+        iMedicalRepository.saveMedical(medical);
+    }
+
+    @Override
+    public List<Medical> findAllMedical() {
+        return iMedicalRepository.findAllMedical();
+    }
+
+    @Override
+    public Medical findId(int id) {
+        return iMedicalRepository.findId(id);
+    }
+
+    @Override
+    public void edit(Medical medical) {
+        iMedicalRepository.edit(medical);
+    }
+
+    @Override
+    public void delete(int id) {
+        iMedicalRepository.delete(id);
     }
 }

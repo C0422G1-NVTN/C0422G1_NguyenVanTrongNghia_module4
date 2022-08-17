@@ -1,6 +1,7 @@
 package com.medical.model;
 
 public class Medical {
+    private int id;
     private String name;
     private int birthday;
     private String gender;
@@ -20,8 +21,17 @@ public class Medical {
     public Medical() {
     }
 
-    public Medical(String name, int birthday, String gender, String nation, String idCard, String vehicle,
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Medical(int id, String name, int birthday, String gender, String nation, String idCard, String vehicle,
                    String idVehicle, String idSeat, int startDay, int startMonth, int startYear, int endDay, int endMonth, int endYear, String journey) {
+        this.id = id;
         this.name = name;
         this.birthday = birthday;
         this.gender = gender;
