@@ -40,11 +40,13 @@
         <td th:text="${product.producer}"></td>
         <td><a th:href="@{/update(id=${product.id})}" class="btn btn-success">Sửa</a></td>
         <td><a th:href="@{/details(id=${product.id})}" class="btn btn-success">Xem Chi tiết</a></td>
-        <td><button type="button" class="btn btn-success"
+        <td>
+            <button type="button" class="btn btn-success"
                     th:attr="onclick=|showInfoProduct('${product.id}', '${product.name}')|"
                     data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Xoá
-        </button></td>
+                Xoá
+            </button>
+        </td>
     </tr>
     </tbody>
 </table>

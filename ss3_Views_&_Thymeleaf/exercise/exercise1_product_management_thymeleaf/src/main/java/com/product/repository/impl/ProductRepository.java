@@ -42,7 +42,7 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public void update(Product product) {
-        products.replace(product.getId(),product);
+        products.replace(product.getId(), product);
     }
 
     @Override
