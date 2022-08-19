@@ -2,6 +2,7 @@ package com.medical.repository.impl;
 
 import com.medical.model.Medical;
 import com.medical.repository.IMedicalRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -113,20 +114,21 @@ public class MedicalRepository implements IMedicalRepository {
     public void edit(Medical medical) {
         for (int i = 0; i < medicalList.size(); i++) {
             if (medical.getId() == medicalList.get(i).getId()) {
-                medicalList.get(i).setName(medical.getName());
-                medicalList.get(i).setBirthday(medical.getBirthday());
-                medicalList.get(i).setGender(medical.getGender());
-                medicalList.get(i).setNation(medical.getNation());
-                medicalList.get(i).setIdCard(medical.getIdCard());
-                medicalList.get(i).setVehicle(medical.getVehicle());
-                medicalList.get(i).setIdVehicle(medical.getIdVehicle());
-                medicalList.get(i).setIdSeat(medical.getIdSeat());
-                medicalList.get(i).setStartDay(medical.getStartDay());
-                medicalList.get(i).setStartMonth(medical.getStartMonth());
-                medicalList.get(i).setStartYear(medical.getStartYear());
-                medicalList.get(i).setEndDay(medical.getStartDay());
-                medicalList.get(i).setEndMonth(medical.getEndMonth());
-                medicalList.get(i).setEndYear(medical.getEndYear());
+//                medicalList.get(i).setName(medical.getName());
+//                medicalList.get(i).setBirthday(medical.getBirthday());
+//                medicalList.get(i).setGender(medical.getGender());
+//                medicalList.get(i).setNation(medical.getNation());
+//                medicalList.get(i).setIdCard(medical.getIdCard());
+//                medicalList.get(i).setVehicle(medical.getVehicle());
+//                medicalList.get(i).setIdVehicle(medical.getIdVehicle());
+//                medicalList.get(i).setIdSeat(medical.getIdSeat());
+//                medicalList.get(i).setStartDay(medical.getStartDay());
+//                medicalList.get(i).setStartMonth(medical.getStartMonth());
+//                medicalList.get(i).setStartYear(medical.getStartYear());
+//                medicalList.get(i).setEndDay(medical.getStartDay());
+//                medicalList.get(i).setEndMonth(medical.getEndMonth());
+//                medicalList.get(i).setEndYear(medical.getEndYear());
+                BeanUtils.copyProperties(medicalList.get(i), medical);
             }
         }
     }

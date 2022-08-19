@@ -20,18 +20,12 @@ public class MedicalController {
 
     @GetMapping("/")
     public String goIndex(Model model) { //home
-        List<String> genderList = iMedicalService.gender();
-        List<String> nationList = iMedicalService.nation();
-        List<String> vehicleList = iMedicalService.vehicle();
-        List<Integer> dayList = iMedicalService.day();
-        List<Integer> monthList = iMedicalService.month();
-        List<Integer> yearList = iMedicalService.year();
-        model.addAttribute("genderList", genderList);
-        model.addAttribute("nationList", nationList);
-        model.addAttribute("vehicleList", vehicleList);
-        model.addAttribute("dayList", dayList);
-        model.addAttribute("monthList", monthList);
-        model.addAttribute("yearList", yearList);
+        model.addAttribute("genderList", iMedicalService.gender());
+        model.addAttribute("nationList", iMedicalService.nation());
+        model.addAttribute("vehicleList", iMedicalService.vehicle());
+        model.addAttribute("dayList", iMedicalService.day());
+        model.addAttribute("monthList", iMedicalService.month());
+        model.addAttribute("yearList", iMedicalService.year());
         model.addAttribute("medical", new Medical());
         return "index";
     }
