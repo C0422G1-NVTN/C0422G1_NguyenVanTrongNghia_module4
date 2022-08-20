@@ -19,9 +19,8 @@ public class ProductController {
     private IProductService iProductService;
 
     @GetMapping(value = {"", "/search", "/list"})
-    public String showListProduct(@RequestParam(required = false) String productName, Model model) {
-        List<Product> products = this.iProductService.findAllProduct(productName);
-        model.addAttribute("products", products);
+    public String showListProduct(Model model) {
+        model.addAttribute("products", iProductService.findAll());
         return "index";
     }
 

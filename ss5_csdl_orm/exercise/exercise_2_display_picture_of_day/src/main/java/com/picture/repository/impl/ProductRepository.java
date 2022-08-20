@@ -10,11 +10,12 @@ import java.util.List;
 
 @Repository
 public class ProductRepository implements IProductRepository {
+
+
     @Override
-    public List<Product> findAllProduct(String name) {
-        TypedQuery<Product> typedQuery = BaseRepository.entityManager.
-                createQuery("select p from Product p where p.productName like :name", Product.class);
-        typedQuery.setParameter("name", "%" + name + "%");
+    public List<Product> findAll() {
+        TypedQuery<Product> typedQuery = BaseRepository.entityManager.createQuery(
+                "select p from Product p", Product.class);
         return typedQuery.getResultList();
     }
 

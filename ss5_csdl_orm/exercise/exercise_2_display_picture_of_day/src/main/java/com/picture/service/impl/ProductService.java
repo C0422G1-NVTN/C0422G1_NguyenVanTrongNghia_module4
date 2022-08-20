@@ -13,9 +13,10 @@ public class ProductService implements IProductService {
     @Autowired
     private IProductRepository iProductRepository;
 
+
     @Override
-    public List<Product> findAllProduct(String name) {
-        return iProductRepository.findAllProduct(name);
+    public List<Product> findAll() {
+        return iProductRepository.findAll();
     }
 
     @Override
