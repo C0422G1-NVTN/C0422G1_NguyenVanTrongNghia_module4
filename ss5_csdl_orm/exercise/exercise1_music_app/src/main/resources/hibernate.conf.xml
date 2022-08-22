@@ -10,6 +10,6 @@
         <property name="hibernate.connection.password">0764052051</property>
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="com.music.model.SongForm"/>
+        <mapping class="com.exercise.model.Music"/>
     </session-factory>
 </hibernate-configuration>
