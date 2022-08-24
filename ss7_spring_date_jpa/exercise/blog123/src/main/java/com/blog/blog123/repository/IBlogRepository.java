@@ -1,0 +1,12 @@
+package com.blog.blog123.repository;
+
+import com.blog.blog123.model.Blog;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IBlogRepository extends JpaRepository<Blog, Integer> {
+
+    Page<Blog> findAllByTitleContainingAndCategory_CategoryNameContaining(String title, String categoryName,
+                                                                          Pageable pageable);
+}
