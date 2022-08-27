@@ -43,14 +43,14 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item">
-                <a class="page-link" th:href="@{/list(page=${products.number-1}, keyword=${keyword})}"
+                <a class="page-link" th:href="@{/list(page=${products.number -1}, keyword=${keyword})}"
                    aria-label="Previous"
                    th:if="${products.hasPrevious()}">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
             <li class="page-item">
-                <span th:text="${products.number+1}"></span>/
+                <span th:text="${products.number + 1}"></span>/
                 <span th:text="${products.totalPages}"></span>
             </li>
             <li class="page-item">

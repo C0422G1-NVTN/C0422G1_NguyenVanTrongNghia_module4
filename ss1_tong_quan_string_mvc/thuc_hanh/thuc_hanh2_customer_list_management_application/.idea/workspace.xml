@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8aeb8cb8-102d-4f53-b25f-04c606efc5ae" name="Changes" comment="" />
+    <list default="true" id="8aeb8cb8-102d-4f53-b25f-04c606efc5ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/customerManagerment/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/customerManagerment/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/customerManagerment/controller/customerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/customerManagerment/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Trung.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/controller/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/controller/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/webapp/WEB-INF/views/greeting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/webapp/WEB-INF/views/greeting.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai_tap/bai_tap_2_tu_dien_don_gian/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/bai_tap_2_tu_dien_don_gian/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +33,31 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="ProjectId" id="2DO3CnhaFsbzMrU0KJeDIumilK1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/customerManagerment/config" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CODEGYM\module_4\ss1_tong_quan_string_mvc\thuc_hanh\thuc_hanh2_customer_list_management_application\src\main\java\com\customerManagerment\config" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -27,7 +67,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1660556193346</updated>
+      <workItem from="1660556195140" duration="2616000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

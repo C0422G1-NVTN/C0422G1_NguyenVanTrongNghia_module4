@@ -5,23 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ff661e0-7c0f-48f8-9efc-82e22eb747aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/controller/customerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/src/main/java/com/codegym/controller/EmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/src/main/java/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2_spring_controller/practice/practice2_test_email/src/main/java/config/AppInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Trung.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/AppInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/controller/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/java/com/example/controller/Greeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../spring-gradle/src/main/webapp/WEB-INF/views/greeting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../spring-gradle/src/main/webapp/WEB-INF/views/greeting.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/config/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/config/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/config/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/config/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/controller/customerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/controller/customerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/thuc_hanh2_customer_list_management_application/src/main/java/com/customerManagerment/model/Customer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +187,7 @@
       <workItem from="1660537920965" duration="4480000" />
       <workItem from="1660548011523" duration="8000" />
       <workItem from="1660548175545" duration="3584000" />
+      <workItem from="1660622609135" duration="119000" />
     </task>
     <servers />
   </component>

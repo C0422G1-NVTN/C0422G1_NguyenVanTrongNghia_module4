@@ -24,6 +24,7 @@ public class SpiceController {
 
     @PostMapping("/choose-condiments")
     public String showChooseCondiments(@RequestParam String[] condiment, Model model) {
+        if (condiment == null)
         model.addAttribute("condiments", condiment);
         return "/sandwich";
     }
