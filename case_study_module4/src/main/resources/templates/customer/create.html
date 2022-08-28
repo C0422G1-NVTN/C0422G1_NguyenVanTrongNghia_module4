@@ -1,124 +1,98 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Customer</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/my-style.css">
 </head>
 <body>
-<div>
-    <div class="col-md-5 bg-success mt-5 p-3" style="margin: auto">
-        <h3>Create Customer</h3>
-        <form action="/furama?action=createCustomer" method="post">
-            <div class="mb-3 row">
-                <label for="id" class="col-sm-4 col-form-label">Id</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="id" name="id">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputTypeId" class="col-sm-4 col-form-label">Type id</label>
-                <div class="col-sm-8">
-                    <select class="form-control" name="typeCustomerId" id="inputTypeId">
-                        <option value="1">Diamond</option>
-                        <option value="2">Platinum</option>
-                        <option value="3">Gold</option>
-                        <option value="4">Silver</option>
-                        <option value="5">Member</option>
-                    </select>
-                </div>
-            </div>
-            <div>
-                <div class="mb-3 row">
-                    <label for="static-name" class="col-sm-4 col-form-label">Name</label>
-                    <div class="col-sm-8">
-                        <input type="text" required class="form-control" id="static-name" name="name">
-<!--                        <c:if test="${message != null}">-->
-<!--                            <p class="text-danger">${message.get("name")}</p>-->
-<!--                        </c:if>-->
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="staticDate" class="col-sm-4 col-form-label">Date of birth</label>
-                    <div class="col-sm-8">
-                        <input type="date" required class="form-control" id="staticDate" name="dateOfBirth">
-<!--                        <c:if test="${message != null}">-->
-<!--                            <p class="text-danger">${message.get("dateOfBirth")}</p>-->
-<!--                        </c:if>-->
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="gender" class="col-sm-4 col-form-label">Gender</label>
-                    <div class="col-sm-8">
-                        <div class="form-check" id="gender">
-                            <input class="form-check-input" type="radio" name="gender" value="1" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Male
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gender" value="0" id="flexRadioDefault2"
-                                   checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Female
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="id-card" class="col-sm-4 col-form-label">id Card</label>
-                    <div class="col-sm-8">
-                        <input type="text" required class="form-control" id="id-card" name="idCard">
-<!--                        <c:if test="${message != null}">-->
-<!--                            <p class="text-danger">${message.get("idCard")}</p>-->
-<!--                        </c:if>-->
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="phone" class="col-sm-4 col-form-label">Phone number</label>
-                    <div class="col-sm-8">
-                        <input type="text" required class="form-control" id="phone" name="phoneNumber">
-<!--                        <c:if test="${message != null}">-->
-<!--                            <p class="text-danger">${message.get("phoneNumber")}</p>-->
-<!--                        </c:if>-->
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="email" class="col-sm-4 col-form-label">Email</label>
-                    <div class="col-sm-8">
-                        <input type="text" required class="form-control" id="email" name="email">
-<!--                        <c:if test="${message != null}">-->
-<!--                            <p class="text-danger">${message.get("email")}</p>-->
-<!--                        </c:if>-->
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="address" class="col-sm-4 col-form-label">Address</label>
-                    <div class="col-sm-8">
-                        <input type="text" required class="form-control" id="address" name="address">
-                    </div>
-                </div>
-                <div>
-                    <button class="btn btn-danger" type="button" onclick="location.href='/furama?action=listCustomer'">
-                        Cancel
-                    </button>
-                    <button class="btn btn-success" type="submit">Add</button>
-                </div>
-            </div>
-        </form>
-        <c:if test="${message != null}">
-            <div class="col-md-5 bg-success mt-5 p-3 text-center" style="margin: auto">
-<!--                <h1>${message}</h1>-->
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                        onclick="location.href='/furama?action=listCustomer'">Back
-                </button>
-            </div>
-        </c:if>
+<header th:replace="~{layout/header::header}"></header>
+
+<div class="container d-flex justify-content-md-center mb-5" style="margin-top: 20px">
+    <div class="row">
+        <div class="col-md-12 bg-light info">
+            <form action="/customer/create" method="post" th:object="${customer}">
+                <fieldset>
+                    <legend style="text-align: center">Customer Information</legend>
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>
+                                <input type="text" name="name" id="name"
+                                       class="form-control"
+                                       th:field="*{name}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Birthday</td>
+                            <td>
+                                <input type="date" name="birthday" id="birthday" class="form-control"
+                                       th:field="*{birthday}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>
+                                <select name="gender" id="gender" class="form-select"
+                                        th:field="*{gender}">
+                                    <option value="1">Male</option>
+                                    <option value="0">Female</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Identify Card</td>
+                            <td>
+                                <input type="text" name="idCard" class="form-control"
+                                       th:field="*{identifyCard}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td>
+                                <input type="text" name="phoneNumber" class="form-control"
+                                       th:field="*{phoneNumber}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>
+                                <input type="text" name="email" class="form-control"
+                                       th:field="*{email}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>
+                                <input type="text" name="address" class="form-control"
+                                       th:field="*{address}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Customer Type</td>
+                            <td>
+                                <select name="customerType" class="form-select"
+                                        th:field="*{customerType.id}">
+                                    <option th:each="customerTypeObj : ${customerTypeList}"
+                                            th:value="${customerTypeObj.id}"
+                                            th:text="${customerTypeObj.name}">
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="reset" value="Clear"></td>
+                            <td><input type="submit" value="Create new Customer" class=" btn-success"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
     </div>
 </div>
 <footer th:replace="~{layout/footer::footer}"></footer>
 <script src="https://kit.fontawesome.com/8a4e8d8d08.js" crossorigin="anonymous"></script>
-
+<script src="/js/bootstrap.js"></script>
 </body>
 </html>
