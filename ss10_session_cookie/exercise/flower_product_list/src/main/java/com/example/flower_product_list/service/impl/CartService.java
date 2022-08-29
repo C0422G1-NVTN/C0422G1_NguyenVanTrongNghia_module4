@@ -1,6 +1,7 @@
 package com.example.flower_product_list.service.impl;
 
 import com.example.flower_product_list.model.Product;
+import com.example.flower_product_list.repository.IProductRepository;
 import com.example.flower_product_list.service.ICartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,11 +12,11 @@ import java.util.Set;
 @Service
 public class CartService implements ICartService {
     @Autowired
-    private ProductService productService;
+    private IProductRepository iProductRepository;
 
     @Override
     public void changeCart(Map<Product, Integer> cart, Long id, String expression) {
-        Product product = productService.findById(id).orElse(null);
+        Product product = iProductRepository.findById(id).orElse(null);
         if (cart.containsKey(product)) {
             if (expression.equals("+"))
                 cart.put(product, cart.get(product) + 1);

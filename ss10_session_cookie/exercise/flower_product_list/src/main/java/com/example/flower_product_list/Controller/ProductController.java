@@ -22,6 +22,11 @@ public class ProductController {
     @Autowired
     private ICartService iCartService;
 
+    @GetMapping("")
+    public String goProductList() {
+        return "/shop";
+    }
+
     @ModelAttribute("cart")
     public Map<Product, Integer> cart() {
         return new HashMap<>();
@@ -41,7 +46,7 @@ public class ProductController {
             return "/error.404";
         }
         model.addAttribute("product", product);
-        return "detail";
+        return "/details";
     }
 
     @GetMapping(value = {"/add"})
@@ -53,7 +58,7 @@ public class ProductController {
         iCartService.changeCart(cart, id, expression);
         model.addAttribute("total", iCartService.total(cart));
         model.addAttribute("cart", cart);
-        return "cart";
+        return "/cart";
     }
 
     @GetMapping("/remove")
@@ -62,7 +67,7 @@ public class ProductController {
         cart.remove(product);
         model.addAttribute("total", iCartService.total(cart));
         model.addAttribute("cart", cart);
-        return "cart";
+        return "/cart";
     }
 
 }
