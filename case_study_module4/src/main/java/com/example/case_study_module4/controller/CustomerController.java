@@ -57,7 +57,7 @@ public class CustomerController {
         redirectAttributes.addFlashAttribute("message",
                 "successfully added new");
 
-        return "redirect:/customer/home";
+        return "redirect:/customer";
     }
 
     @GetMapping("/edit")
@@ -85,11 +85,11 @@ public class CustomerController {
         return "redirect:/customer";
     }
 
-    @GetMapping("/delete")
+    @PostMapping("/delete")
     public String deleteCustomer(@RequestParam int customerId) {
 
         this.iCustomerService.deleteById(customerId);
 
-        return "redirect:/customer/home";
+        return "redirect:/customer";
     }
 }
