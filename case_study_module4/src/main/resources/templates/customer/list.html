@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <a href="/customer/create" class="btn btn-success">Add new customer</a>
+            <a href="/create" class="btn btn-success">Add new customer</a>
         </div>
         <div class="col-md-3"></div>
         <div class="col-md-6 d-flex justify-content-end">
@@ -50,7 +50,7 @@
                 </thead>
                 <tbody>
 
-                <tr class="table-light" th:each="customer, loop : ${customerList}">
+                <tr class="table-light" th:each="customer, loop : ${customers}">
                     <th scope="row" th:text="${loop.count}"></th>
                     <td th:text="${customer.name}"></td>
                     <td th:text="${customer.birthday}"></td>
@@ -67,9 +67,8 @@
                                 class="btn"
                                 data-bs-toggle="modal"
                                 data-bs-target="#editButton">
-                            <a href="#">
-                                <img src="/img/edit-2.png"
-                                     style="height: 25px;width: auto">
+                            <a th:href="@{/customer/edit(id=${customer.id})}">
+                                Sửa
                             </a>
 
                         </button>
@@ -95,22 +94,22 @@
     <ul class="pagination">
         <li class="page-item">
             <a class="page-link"
-               th:href="@{/customer/list(page=${customerList.number - 1})}"
-               th:if="${customerList.hasPrevious()}"
+               th:href="@{/customer/list(page=${customers.number - 1})}"
+               th:if="${customers.hasPrevious()}"
                aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
             </a>
         </li>
         <li class="btn btn-light">
-            <span th:text="${customerList.number + 1}"></span>
+            <span th:text="${customers.number + 1}"></span>
             /
-            <span th:text="${customerList.totalPages}"></span>
+            <span th:text="${customers.totalPages}"></span>
         </li>
 
         <li class="page-item">
             <a class="page-link"
-               th:href="@{/customer/list(page=${customerList.number + 1})}"
-               th:if="${customerList.hasNext()}"
+               th:href="@{/customer/list(page=${customers.number + 1})}"
+               th:if="${customers.hasNext()}"
                aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
             </a>
@@ -121,22 +120,24 @@
 <!--modal delete-->
 <div class="modal fade" id="deleteButton" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="/customer?action=removeCustomer" method="post">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Deleting</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Deleting</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="customer/delete" method="get">
                 <div class="modal-body">
                     Are you sure about that? Delete <span id="removeCustomerName"></span>
-                    <input type="hidden" id="removeCustomerId" name="removeCustomerId">
+                    <input type="hidden" id="removeCustomerId" name="customerId">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+
     </div>
 </div>
 

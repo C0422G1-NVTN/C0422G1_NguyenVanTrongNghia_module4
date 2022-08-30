@@ -11,62 +11,62 @@
 <div class="container d-flex justify-content-md-center mb-5" style="margin-top: 20px">
     <div class="row">
         <div class="col-md-12 bg-light info">
-            <form method="post">
+            <form th:object="${customer}" method="post" action="/customer/edit">
                 <fieldset>
                     <legend style="text-align: center">Edit Customer Information</legend>
+                    <input type="hidden" th:field="*{id}">
                     <table>
                         <tr>
                             <td>Name</td>
                             <td><input type="text" name="name"
                                        id="name" class="form-control"
-                                       value="${customer.name}"></td>
+                                       th:field="*{name}"></td>
                         </tr>
                         <tr>
                             <td>Birthday</td>
                             <td><input type="date" name="birthday"
                                        id="birthday" class="form-control"
-                                       value=""></td>
+                                       th:field="*{birthday}"></td>
                         </tr>
                         <tr>
                             <td>Gender</td>
                             <td>
-                                <select name="gender" class="form-select">
-                                    <option value="1" selected>Male</option>
-                                    <option value="0">Female</option>
-                                </select>
+                                <input id="gender_0" th:field="*{gender}" value="0"  type="radio">
+                                <label for="gender_0">Nữ</label>
+                                <input id="gender_1" th:field="*{gender}" value="1"  type="radio">
+                                <label for="gender_1">Nam</label>
                             </td>
                         </tr>
                         <tr>
                             <td>Identify Card</td>
                             <td><input type="text" name="idCard"
                                        class="form-control"
-                                       value=""></td>
+                                       th:field="*{identifyCard}"></td>
                         </tr>
                         <tr>
                             <td>Phone Number</td>
                             <td><input type="text" name="phoneNumber"
                                        class="form-control"
-                                       value=""></td>
+                                       th:field="*{phoneNumber}"></td>
                         </tr>
                         <tr>
                             <td>Email</td>
                             <td><input type="text" name="email"
                                        class="form-control"
-                                       value=""></td>
+                                       th:field="*{email}"></td>
                         </tr>
                         <tr>
                             <td>Address</td>
                             <td><input type="text" name="address"
                                        class="form-control"
-                                       value=""></td>
+                                       th:field="*{address}"></td>
                         </tr>
                         <tr>
                             <td>Customer Type</td>
-
                             <td>
-                                <select name="customerType" class="form-select">
-                                    <option value="" selected>customerTypeName</option>
-                                    <option value="">customerTypeName</option>
+                                <select th:field="*{customerType}" class="form-select">
+                                    <option th:each="customerType : ${customerTypeList}"
+                                            th:value="${customerType.id}" th:text="${customerType.name}"></option>
                                 </select>
                             </td>
                         </tr>

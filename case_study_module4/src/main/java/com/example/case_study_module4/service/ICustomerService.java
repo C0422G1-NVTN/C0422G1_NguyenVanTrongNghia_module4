@@ -5,9 +5,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface ICustomerService {
-    void save(Customer customer);
+    Page<Customer> findAllByNameContaining(String nameCustomer, Pageable pageable);
 
-    Page<Customer> findAll(Pageable pageable);
+    void save(Customer customer);
 
     Customer findById(int id);
 
