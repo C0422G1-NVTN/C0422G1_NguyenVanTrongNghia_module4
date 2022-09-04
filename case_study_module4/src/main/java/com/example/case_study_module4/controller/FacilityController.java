@@ -27,7 +27,7 @@ public class FacilityController {
         model.addAttribute("facility", new Facility());
         model.addAttribute("facilityTypeList", this.iFacilityTypeService.findAll());
         model.addAttribute("rentTypeList", this.iRentTypeService.findAll());
-        return "facility/add";
+        return "/facility/add";
     }
 
     @PostMapping("/addFacility")
@@ -36,7 +36,7 @@ public class FacilityController {
         redirectAttributes.addFlashAttribute("messCreate", "Create Success");
         redirectAttributes.addFlashAttribute("facilityTypeList", this.iFacilityTypeService.findAll());
         redirectAttributes.addFlashAttribute("rentTypeList", this.iRentTypeService.findAll());
-        return "redirect:/facility/add";
+        return "redirect:/facility";
     }
 
     @GetMapping("/update")
@@ -44,7 +44,7 @@ public class FacilityController {
         model.addAttribute("facility", this.iFacilityService.findById(idUpdate));
         model.addAttribute("facilityTypeList", this.iFacilityTypeService.findAll());
         model.addAttribute("rentTypeList", this.iRentTypeService.findAll());
-        return "facility/update";
+        return "/facility/update";
     }
 
     @PostMapping("/updateFacility")
@@ -53,7 +53,7 @@ public class FacilityController {
         redirectAttributes.addFlashAttribute("messUpdate", "Update Success");
         redirectAttributes.addFlashAttribute("facilityTypeList", this.iFacilityTypeService.findAll());
         redirectAttributes.addFlashAttribute("rentTypeList", this.iRentTypeService.findAll());
-        return "redirect:/facility  ";
+        return "redirect:/facility";
     }
 
     @PostMapping("/delete")
@@ -72,7 +72,7 @@ public class FacilityController {
         model.addAttribute("searchName", searchName);
         model.addAttribute("facilityTypeName", facilityTypeName);
         model.addAttribute("size", pageable.getPageSize());
-        return "facility/list";
+        return "/facility/list";
     }
 
 }

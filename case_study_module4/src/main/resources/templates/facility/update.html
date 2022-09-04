@@ -9,14 +9,17 @@
 <body>
 <header th:replace="~{layout/header::header}"></header>
 
-<p class="text-success" th:text="${messCreate}"></p>
 <div class="d-flex justify-content-center">
-    <form action="/facility/addFacility" method="post" class="text-success fw-bold bg-light w-75 mt-5 mb-5 shadow-lg p-5" th:object="${facility}">
-        <select class="form-select-lg w-50 m-auto mt-3 border-success rounded-pill" th:field="*{facilityType}" id="addSelect"
-                onchange="displayInputAdd()">
-            <option value="none">Chọn loại dịch vụ</option>
-            <option th:each="facilityType:${facilityTypeList}" th:value="${facilityType.facilityTypeId}" th:text="${facilityType.facilityTypeName}"></option>
+    <form action="/facility/updateFacility" method="post"
+          class="text-warning fw-bold bg-light w-75 mt-5 mb-5 shadow-lg p-5" th:object="${facility}">
+        <select class="form-select-lg w-50 m-auto mt-3 border-warning rounded-pill" th:field="*{facilityType}"
+                id="addSelect"
+                th:onchange="displayInputAdd(*{facilityType.facilityTypeId})">
+            <option th:each="facilityType:${facilityTypeList}" th:value="${facilityType.facilityTypeId}"
+                    th:text="${facilityType.facilityTypeName}"></option>
         </select>
+        <input type="hidden" id="facilityTypeId" th:value="*{facilityType.facilityTypeId}">
+        <input type="text" hidden th:field = "*{facilityId}">
         <div class="row">
             <div class="col-md-6 col-sm-12 ">
                 <div class="mb-3">
@@ -27,7 +30,7 @@
                 <div class="mb-3">
                     <label for="dienTich" class="form-label ">2. Nhập Diện tích sử dụng</label>
                     <input type="number" class="form-control" id="dienTich" th:field="*{area}"
-                           placeholder="Nhập Diện tích" >
+                           placeholder="Nhập Diện tích">
                 </div>
                 <div class="mb-3">
                     <label for="chiPhiThue" class="form-label ">3. Nhập chi phí thuê</label>
@@ -42,7 +45,8 @@
                 <div class="mb-3">
                     <label for="soNguoiToiDa" class="form-label">5. Nhập kiểu thuê</label>
                     <select name="kieuThue" id="kieuThue" th:field="*{rentType}" class="form-control">
-                        <option th:each="rentType:${rentTypeList}" th:value="${rentType.rentTypeId}" th:text="${rentType.rentTypeName}"></option>
+                        <option th:each="rentType:${rentTypeList}" th:value="${rentType.rentTypeId}"
+                                th:text="${rentType.rentTypeName}"></option>
                     </select>
                 </div>
             </div>
@@ -76,26 +80,17 @@
         </div>
         <div>
             <a class="btn btn-primary" href="/facility">Quay lại</a>
-            <button type="submit" id="add" class="btn btn-success">Thêm mới</button>
+            <button type="submit" id="add" class="btn btn-warning">Cập nhật</button>
         </div>
     </form>
 </div>
 
-
 <script>
     window.onload = function () {
-        setStatusSummitBtn(false);
+        displayInputAdd(document.getElementById("facilityTypeId").value);
     }
-    function setStatusSummitBtn(action) {
-        // false => tắt ~ disable
-        // true => bật ~ enable
-        if (action === false) {
-            document.getElementById("add").disabled = true;
-        } else
-            document.getElementById("add").disabled = false;
-    }
-    function displayInputAdd() {
-        let value = document.getElementById("addSelect").value;
+
+    function displayInputAdd(value) {
         let divTieuChuanPhong = document.getElementById("divTieuChuanPhong");
         let divTienNghiKhac = document.getElementById("divTienNghiKhac");
         let divDienTichHoBoi = document.getElementById("divDienTichHoBoi");
@@ -110,8 +105,6 @@
                 divSoTang.style.display = "none"
                 document.getElementById("soTang").value = 0;
                 divDichVuMienPhi.style.display = "none"
-                setStatusSummitBtn(false);
-                console.log(0)
                 break;
             case "1":
                 divTieuChuanPhong.style.display = "block"
@@ -119,8 +112,6 @@
                 divDienTichHoBoi.style.display = "block"
                 divSoTang.style.display = "block"
                 divDichVuMienPhi.style.display = "none"
-                setStatusSummitBtn(true);
-                console.log(2)
                 break;
             case "2":
                 divTieuChuanPhong.style.display = "block"
@@ -129,8 +120,6 @@
                 document.getElementById("dienTichHoBoi").value = 0;
                 divSoTang.style.display = "block"
                 divDichVuMienPhi.style.display = "none"
-                setStatusSummitBtn(true);
-                console.log(1)
                 break;
             case "3":
                 divTieuChuanPhong.style.display = "none"
@@ -140,8 +129,6 @@
                 divSoTang.style.display = "none"
                 document.getElementById("soTang").value = 0;
                 divDichVuMienPhi.style.display = "block"
-                setStatusSummitBtn(true);
-                console.log(3)
                 break;
         }
     }

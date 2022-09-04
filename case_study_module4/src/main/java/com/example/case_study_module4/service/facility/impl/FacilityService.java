@@ -15,31 +15,31 @@ public class FacilityService implements IFacilityService {
 
     @Override
     public Page<Facility> findAll(Pageable pageable) {
-        return null;
+        return this.iFacilityRepository.findAll(pageable);
     }
 
     @Override
     public void add(Facility facility) {
-
+        this.iFacilityRepository.save(facility);
     }
 
     @Override
     public void update(Facility facility) {
-
+        this.iFacilityRepository.save(facility);
     }
 
     @Override
     public void delete(int id) {
-
+        this.iFacilityRepository.deleteById(id);
     }
 
     @Override
     public Facility findById(int id) {
-        return null;
+        return this.iFacilityRepository.findById(id).orElse(null);
     }
 
     @Override
     public Page<Facility> search(String name, String facilityTypeName, Pageable pageable) {
-        return null;
+        return this.iFacilityRepository.findAllByFacilityNameContainsAndFacilityType_FacilityTypeNameContains(name,facilityTypeName,pageable);
     }
 }
