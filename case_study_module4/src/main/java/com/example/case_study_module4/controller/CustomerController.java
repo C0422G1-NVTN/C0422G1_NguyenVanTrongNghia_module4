@@ -1,8 +1,8 @@
 package com.example.case_study_module4.controller;
 
 import com.example.case_study_module4.model.customer.Customer;
-import com.example.case_study_module4.service.ICustomerService;
-import com.example.case_study_module4.service.ICustomerTypeService;
+import com.example.case_study_module4.service.customer.ICustomerService;
+import com.example.case_study_module4.service.customer.ICustomerTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;

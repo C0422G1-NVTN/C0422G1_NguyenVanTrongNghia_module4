@@ -1,19 +1,17 @@
 package com.example.case_study_module4.model.customer;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table
+@Table(name = "customer_type")
 public class CustomerType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "customer_type_id")
     private Integer id;
+
+    @Column(name = "customer_type_name")
     private String name;
 
     @OneToMany(mappedBy = "customerType")

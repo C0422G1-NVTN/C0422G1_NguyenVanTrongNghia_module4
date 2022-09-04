@@ -1,121 +1,132 @@
 package com.example.case_study_module4.model.customer;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
-@Table
-public class Customer{
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Integer id;
+@Table(name = "customer")
+public class Customer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "customer_id")
+    private Integer id;
 
-        private String name;
+    @Column(name = "customer_name")
+    private String name;
 
-        @Column(columnDefinition = "DATE")
-        private String birthday;
+    @Column(name = "date_of_birth")
+    private String birthday;
 
-        private int gender;
-        private String identifyCard;
-        private  String phoneNumber;
-        private  String email;
+    private int gender;
 
-        @ManyToOne
-        @JoinColumn(name = "customerType", referencedColumnName = "id")
-        private CustomerType customerType;
+    @Column(name = "id_card")
+    private String identifyCard;
 
-        private String address;
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
-        public Customer() {
-        }
+    private String email;
 
-        public Customer(Integer id, String name, String birthday, int gender, String identifyCard, String phoneNumber,
-                        String email, CustomerType customerType, String address) {
-                this.id = id;
-                this.name = name;
-                this.birthday = birthday;
-                this.gender = gender;
-                this.identifyCard = identifyCard;
-                this.phoneNumber = phoneNumber;
-                this.email = email;
-                this.customerType = customerType;
-                this.address = address;
-        }
+    @ManyToOne
+    @JoinColumn(name = "customer_type_id", referencedColumnName = "customer_type_id")
+    private CustomerType customerType;
 
-        public Integer getId() {
-                return id;
-        }
+    private String address;
 
-        public void setId(Integer id) {
-                this.id = id;
-        }
+    public Customer() {
+    }
 
-        public String getName() {
-                return name;
-        }
+    public Customer(String name, String birthday, int gender, String identifyCard, String phoneNumber,
+                    String email, CustomerType customerType, String address) {
+        this.name = name;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.identifyCard = identifyCard;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.customerType = customerType;
+        this.address = address;
+    }
 
-        public void setName(String name) {
-                this.name = name;
-        }
+    public Customer(String name, String birthday, int gender, String identifyCard, String phoneNumber,
+                    String email, String address) {
+        this.name = name;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.identifyCard = identifyCard;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+    }
 
-        public String getBirthday() {
-                return birthday;
-        }
+    public Integer getId() {
+        return id;
+    }
 
-        public void setBirthday(String birthday) {
-                this.birthday = birthday;
-        }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-        public int getGender() {
-                return gender;
-        }
+    public String getName() {
+        return name;
+    }
 
-        public void setGender(int gender) {
-                this.gender = gender;
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        public String getIdentifyCard() {
-                return identifyCard;
-        }
+    public String getBirthday() {
+        return birthday;
+    }
 
-        public void setIdentifyCard(String identifyCard) {
-                this.identifyCard = identifyCard;
-        }
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
 
-        public String getPhoneNumber() {
-                return phoneNumber;
-        }
+    public int getGender() {
+        return gender;
+    }
 
-        public void setPhoneNumber(String phoneNumber) {
-                this.phoneNumber = phoneNumber;
-        }
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
 
-        public String getEmail() {
-                return email;
-        }
+    public String getIdentifyCard() {
+        return identifyCard;
+    }
 
-        public void setEmail(String email) {
-                this.email = email;
-        }
+    public void setIdentifyCard(String identifyCard) {
+        this.identifyCard = identifyCard;
+    }
 
-        public CustomerType getCustomerType() {
-                return customerType;
-        }
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-        public void setCustomerType(CustomerType customerType) {
-                this.customerType = customerType;
-        }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-        public String getAddress() {
-                return address;
-        }
+    public String getEmail() {
+        return email;
+    }
 
-        public void setAddress(String address) {
-                this.address = address;
-        }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public CustomerType getCustomerType() {
+        return customerType;
+    }
+
+    public void setCustomerType(CustomerType customerType) {
+        this.customerType = customerType;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
