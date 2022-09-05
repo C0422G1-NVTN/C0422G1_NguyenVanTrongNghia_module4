@@ -10,8 +10,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-import java.util.Optional;
 
 @CrossOrigin
 @RestController
@@ -33,20 +33,20 @@ public class BlogRestController {
     }
 
     @GetMapping(value = "/list")
-    public ResponseEntity<Page<Blog>> goList(@RequestParam(defaultValue = "") String title, @PageableDefault(size = 5) Pageable pageable){
+    public ResponseEntity<Page<Blog>> goList(@RequestParam(defaultValue = "") String title, @PageableDefault(size = 5) Pageable pageable) {
         Page<Blog> blogPage = this.iBlogService.findAllByTitleContaining(title, pageable);
-        if (!blogPage.hasContent()){
+        if (!blogPage.hasContent()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<>(blogPage,HttpStatus.OK);
+        return new ResponseEntity<>(blogPage, HttpStatus.OK);
     }
 
     @GetMapping(value = "/listCategory")
-    public ResponseEntity<List<Blog>> goCategoryList(@RequestParam int id){
+    public ResponseEntity<List<Blog>> goCategoryList(@RequestParam int id) {
         List<Blog> blogListCategory = this.iBlogService.findByCategoryId(id);
-        if (blogListCategory.isEmpty()){
+        if (blogListCategory.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<>(blogListCategory,HttpStatus.OK);
+        return new ResponseEntity<>(blogListCategory, HttpStatus.OK);
     }
 }
