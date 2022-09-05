@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/s11_webservice_website/practice/spring-customer-management-restful" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ss10_session_cookie/practice/spring-hit-counter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ss2_spring_controller/practice/practice_5_customer_management/customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ss3_Views_&amp;_Thymeleaf/practice/spring-customer-management-thymleaf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ss5_csdl_orm/practice/spring-customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ss6_jpa/practice/practice1-spring-customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ss7_spring_date_jpa/practice/spring-customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ss8_validation/practice/spring-validate-infor-user" vcs="Git" />
+  </component>
+</project>
