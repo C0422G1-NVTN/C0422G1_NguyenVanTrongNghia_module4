@@ -19,21 +19,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
-    private AppConfig appConfig = new AppConfig();
-
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         return bCryptPasswordEncoder;
-    }
-
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-
-        // Sét đặt dịch vụ để tìm kiếm User trong Database.
-        // Và sét đặt PasswordEncoder.
-        auth.userDetailsService(userDetailsService).passwordEncoder(appConfig.passwordEncoder());
-
     }
 
     @Override
@@ -46,7 +35,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         // Trang /userInfo yêu cầu phải login với vai trò ROLE_USER hoặc ROLE_ADMIN.
         // Nếu chưa login, nó sẽ redirect tới trang /login.
-        http.authorizeRequests().antMatchers("/userInfo", "/bolg/home", "/blog").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/userInfo", "/blog/home", "/blog").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
         // Trang chỉ dành cho ADMIN
         http.authorizeRequests().antMatchers("/blog/edit").access("hasRole('ROLE_ADMIN')");
