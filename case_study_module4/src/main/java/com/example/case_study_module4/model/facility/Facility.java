@@ -1,8 +1,10 @@
 package com.example.case_study_module4.model.facility;
 
 
-import javax.persistence.Entity;
+import com.example.case_study_module4.model.contract.Contract;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "facility")
@@ -24,7 +26,7 @@ public class Facility {
 
 
     @ManyToOne
-    @JoinColumn(name = "rent_type_id",referencedColumnName = "rent_type_id")
+    @JoinColumn(name = "rent_type_id", referencedColumnName = "rent_type_id")
     private RentType rentType;
 
     @ManyToOne
@@ -45,6 +47,9 @@ public class Facility {
 
     @Column(name = "facility_free")
     private String facilityFree;
+
+    @OneToMany(mappedBy = "facility")
+    Set<Contract> contractSet;
 
     public Facility() {
     }

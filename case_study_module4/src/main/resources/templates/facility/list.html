@@ -2,27 +2,32 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>LIST FACILITY</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image: url("https://statics.vinpearl.com/phu-quoc-beach-1_1645159695.jpg");
+        }
+    </style>
 </head>
 <body>
 <header th:replace="~{layout/header::header}"></header>
 
-<h1>List Facility</h1>
+<h1 class="d-flex justify-content-center text-white font-monospace">LIST FACILITY</h1>
 
 <!--<h1 class="bg-success text-center text-white p-3" style="margin-top: 150px">Danh sách dịch vụ</h1>-->
 
 <div class="container">
     <a class="btn btn-success mt-3 mb-3" href="/facility/add">Thêm mới dịch vụ</a>
     <form class="d-flex mb-3 mt3" action="/facility/search" method="get">
-        <input class="form-control me-2" name="searchName" placeholder="Search Facility" aria-label="Search">
-        <Select name="facilityTypeName" class="form-control border-success">
-            <option value="">Select Facility Type</option>
-            <option th:each="facilityType:${facilityTypeList}" th:value="${facilityType.facilityTypeName}"
-                    th:text="${facilityType.facilityTypeName}"></option>
-        </Select>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2 bg-transparent" name="searchName" placeholder="Search Facility"  aria-label="Search">
+<!--        <Select name="facilityTypeName" class="form-control border-success">-->
+<!--            <option value="">Select Facility Type</option>-->
+<!--            <option th:each="facilityType:${facilityTypeList}" th:value="${facilityType.facilityTypeName}"-->
+<!--                    th:text="${facilityType.facilityTypeName}"></option>-->
+<!--        </Select>-->
+        <button class="btn bg-white" type="submit">Search</button>
     </form>
 
     <!--    Table-->

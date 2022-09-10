@@ -1,6 +1,10 @@
 package com.example.case_study_module4.model.customer;
 
+import com.example.case_study_module4.model.contract.Contract;
+import com.example.case_study_module4.model.facility.Facility;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "customer")
@@ -32,6 +36,8 @@ public class Customer {
 
     private String address;
 
+    @OneToMany(mappedBy = "customer")
+    Set<Contract> contractSet;
     public Customer() {
     }
 

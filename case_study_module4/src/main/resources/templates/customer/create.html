@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Customer</title>
+    <title>CREATE CUSTOMER</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/my-style.css">
 </head>
@@ -12,7 +12,7 @@
 <div class="container d-flex justify-content-md-center mb-5" style="margin-top: 20px">
     <div class="row">
         <div class="col-md-12 bg-light info">
-            <form action="/customer/create" method="post" th:object="${customer}">
+            <form action="/customer/save" method="post" th:object="${customer}">
                 <fieldset>
                     <legend style="text-align: center">Customer Information</legend>
                     <table>
@@ -82,7 +82,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><input type="reset" value="Clear"></td>
+<!--                            <td><input type="reset" value="Clear"></td>-->
                             <td><input type="submit" value="Create new Customer" class=" btn-success"></td>
                         </tr>
                     </table>
