@@ -15,6 +15,15 @@ public class FacilityType {
 
     @OneToMany (mappedBy = "facilityType")
     Set<Facility> facilitySet;
+
+    public Set<Facility> getFacilitySet() {
+        return facilitySet;
+    }
+
+    public void setFacilitySet(Set<Facility> facilitySet) {
+        this.facilitySet = facilitySet;
+    }
+
     public FacilityType() {
     }
 

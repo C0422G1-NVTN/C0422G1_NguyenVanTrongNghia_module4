@@ -2,6 +2,7 @@ package com.example.case_study_module4.model.facility;
 
 
 import com.example.case_study_module4.model.contract.Contract;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -24,11 +25,11 @@ public class Facility {
     @Column(name = "max_people")
     private int maxPeople;
 
-
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "rent_type_id", referencedColumnName = "rent_type_id")
     private RentType rentType;
-
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "facility_type_id")
     private FacilityType facilityType;
@@ -47,7 +48,7 @@ public class Facility {
 
     @Column(name = "facility_free")
     private String facilityFree;
-
+    @JsonBackReference
     @OneToMany(mappedBy = "facility")
     Set<Contract> contractSet;
 
@@ -81,6 +82,14 @@ public class Facility {
 
     public String getFacilityName() {
         return facilityName;
+    }
+
+    public Set<Contract> getContractSet() {
+        return contractSet;
+    }
+
+    public void setContractSet(Set<Contract> contractSet) {
+        this.contractSet = contractSet;
     }
 
     public void setFacilityName(String facilityName) {

@@ -5,7 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IContractRepository extends JpaRepository<Contract,Integer> {
+import java.time.LocalDate;
 
-    Page<Contract> findByEndDate(String endDate, Pageable pageable);
+public interface IContractRepository extends JpaRepository<Contract,Integer> {
+    Page<Contract> findByEndDateGreaterThanEqual(LocalDate endDate, Pageable pageable);
 }

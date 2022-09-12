@@ -2,8 +2,10 @@ package com.example.case_study_module4.model.contract;
 
 import com.example.case_study_module4.model.customer.Customer;
 import com.example.case_study_module4.model.facility.Facility;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
@@ -11,8 +13,7 @@ import java.util.Set;
 public class Contract {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "contract_id")
-    private Integer idContract;
+    private Integer contractId;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "customer_id")
@@ -22,36 +23,36 @@ public class Contract {
     @JoinColumn(name = "facility_id", referencedColumnName = "facility_id")
     private Facility facility;
 
-    @Column(columnDefinition = "DATE", name = "start_date")
-    private String startDate;
-
-    @Column(columnDefinition = "DATE", name = "end_date")
-    private String endDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate startDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate endDate;
 
     private double deposit;
 
-    @OneToMany(mappedBy = "Contract")
+    @OneToMany(mappedBy = "contract")
     private Set<ContractDetail> contractDetails;
 
     public Contract() {
     }
 
-    public Contract(Integer idContract, Customer customer, Facility facility, String startDate,
-                    String endDate, double deposit) {
-        this.idContract = idContract;
+
+    public Contract(Integer contractId, Customer customer, Facility facility, LocalDate startDate, LocalDate endDate, double deposit, Set<ContractDetail> contractDetails) {
+        this.contractId = contractId;
         this.customer = customer;
         this.facility = facility;
         this.startDate = startDate;
         this.endDate = endDate;
         this.deposit = deposit;
+        this.contractDetails = contractDetails;
     }
 
-    public Integer getIdContract() {
-        return idContract;
+    public Integer getContractId() {
+        return contractId;
     }
 
-    public void setIdContract(Integer idContract) {
-        this.idContract = idContract;
+    public void setContractId(Integer contractId) {
+        this.contractId = contractId;
     }
 
     public Customer getCustomer() {
@@ -70,19 +71,19 @@ public class Contract {
         this.facility = facility;
     }
 
-    public String getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public String getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
@@ -92,5 +93,13 @@ public class Contract {
 
     public void setDeposit(double deposit) {
         this.deposit = deposit;
+    }
+
+    public Set<ContractDetail> getContractDetails() {
+        return contractDetails;
+    }
+
+    public void setContractDetails(Set<ContractDetail> contractDetails) {
+        this.contractDetails = contractDetails;
     }
 }

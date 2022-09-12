@@ -1,6 +1,6 @@
 package com.example.case_study_module4.model.contract;
 
-import com.example.case_study_module4.model.facility.RentType;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 
@@ -9,15 +9,16 @@ import javax.persistence.*;
 public class ContractDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_contract_detail")
+    @Column(name = "contract_detail_id")
     private Integer idContractDetail;
 
+    @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "id_contract", referencedColumnName = "id_contract")
-    private Contract Contract;
+    @JoinColumn(name = "contract_id", referencedColumnName = "contractId")
+    private Contract contract;
 
     @ManyToOne
-    @JoinColumn(name = "id_attach_facility", referencedColumnName = "id_attach_facility")
+    @JoinColumn(name = "attach_facility_id", referencedColumnName = "attach_facility_id")
     private AttachFacility attachFacility;
 
     @Column(name = "quantity")
@@ -28,7 +29,7 @@ public class ContractDetail {
 
     public ContractDetail(Integer idContractDetail,Contract contract, AttachFacility attachFacility, Integer quantity) {
         this.idContractDetail = idContractDetail;
-        Contract = contract;
+        this.contract = contract;
         this.attachFacility = attachFacility;
         this.quantity = quantity;
     }
@@ -41,12 +42,12 @@ public class ContractDetail {
         this.idContractDetail = idContractDetail;
     }
 
-    public com.example.case_study_module4.model.contract.Contract getContract() {
-        return Contract;
+    public Contract getContract() {
+        return contract;
     }
 
     public void setContract(Contract contract) {
-        Contract = contract;
+        this.contract = contract;
     }
 
     public AttachFacility getAttachFacility() {
